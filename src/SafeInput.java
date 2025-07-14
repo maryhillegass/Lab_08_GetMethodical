@@ -223,5 +223,35 @@ public class SafeInput {
         return value;
     }
 
+    /**
+     *
+     * @param msg message to be centered across 60 characters
+     */
+    public static void prettyHeader(String msg){
+        int length = msg.length();
+        int blank = (54-length)/2;
+        //first row of stars
+        for (int x = 1; x <= 60; x++)
+            System.out.print("*");
+       // first 3 stars
+        System.out.println();
+        for (int i = 1; i <= 3; i++)
+            System.out.print("*");
+        //blanks before message
+        for (int i = 1; i <= blank; i++)
+            System.out.print(" ");
+        //message
+        System.out.print(msg);
+        //blanks after message
+        for (int i = 1; i <= (54-length-blank); i++)
+            System.out.print(" ");
+        //last 3 stars
+        for (int i = 1; i <= 3; i++)
+            System.out.print("*");
+        System.out.println();
+        //last row of stars
+        for (int x = 1; x <= 60; x++)
+            System.out.print("*");
+    }
 
 }

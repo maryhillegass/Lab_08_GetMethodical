@@ -15,7 +15,9 @@ public class DevTest {
         //System.out.println("You picked " + rangedDouble);
         //boolean coffee = SafeInput.getYNConfirm(in,"Do you like coffee?");
         //System.out.println("I like coffee is " + coffee);
-        String SSN = "";
-        SSN = SafeInput.getRegExString(in, "Enter your SSN", "\\d{3}-\\d{2}-\\d{4}");
+        //String SSN = "";
+        //SSN = SafeInput.getRegExString(in, "Enter your SSN", "\\d{3}-\\d{2}-\\d{4}");
+        String message = SafeInput.getNonZeroLenString(in, "Enter your message");
+        SafeInput.prettyHeader(message);
     }
 }
